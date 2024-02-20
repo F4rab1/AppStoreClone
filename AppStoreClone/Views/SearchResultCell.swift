@@ -10,7 +10,7 @@ import SnapKit
 
 class SearchResultCell: UICollectionViewCell {
     
-    let imageView: UIImageView = {
+    let appIconImageView: UIImageView = {
         let iv = UIImageView()
         iv.backgroundColor = .red
         iv.layer.cornerRadius = 12
@@ -49,32 +49,35 @@ class SearchResultCell: UICollectionViewCell {
         
         return button
     }()
-
-    lazy var labelsStackView: UIStackView = {
-        let stackview = UIStackView()
-        stackview.axis = .vertical
-        [nameLabel,
-         categoryLabel,
-         ratingsLabel].forEach { stackview.addArrangedSubview($0) }
-        
-        return stackview
-    }()
     
     lazy var stackView: UIStackView = {
         let stackview = UIStackView()
         stackview.spacing = 12
         stackview.alignment = .center
-        [imageView,
-         labelsStackView,
+        [appIconImageView,
+         VerticalStackView(arrangedSubviews: [
+            nameLabel, categoryLabel, ratingsLabel
+         ]),
          getButton].forEach { stackview.addArrangedSubview($0) }
         
         return stackview
     }()
     
+    lazy var screenshot1ImageView = self.createScreenshotImageView()
+    lazy var screenshot2ImageView = self.createScreenshotImageView()
+    lazy var screenshot3ImageView = self.createScreenshotImageView()
+    
+    func createScreenshotImageView() -> UIImageView {
+        let imageView = UIImageView()
+        imageView.backgroundColor = .blue
+        
+        return imageView
+    }
+    
     override init(frame: CGRect) {
         super.init(frame: frame)
         
-        backgroundColor = .blue
+        backgroundColor = .black
         
         addSubview(stackView)
         setupConstraints()
@@ -85,7 +88,7 @@ class SearchResultCell: UICollectionViewCell {
     }
     
     func setupConstraints() {
-        imageView.snp.makeConstraints { make in
+        appIconImageView.snp.makeConstraints { make in
             make.width.height.equalTo(64)
         }
         

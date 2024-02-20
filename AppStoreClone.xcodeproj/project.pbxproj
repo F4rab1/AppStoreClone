@@ -17,6 +17,7 @@
 		D3AF3E752B74985800344792 /* AppSearchControllerViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D3AF3E742B74985800344792 /* AppSearchControllerViewController.swift */; };
 		D3AF3E782B749F4700344792 /* SearchResultCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = D3AF3E772B749F4700344792 /* SearchResultCell.swift */; };
 		D3AF3E7B2B74A07C00344792 /* SnapKit in Frameworks */ = {isa = PBXBuildFile; productRef = D3AF3E7A2B74A07C00344792 /* SnapKit */; };
+		D3F951BA2B7DDC26006C8D2D /* VerticalStackView.swift in Sources */ = {isa = PBXBuildFile; fileRef = D3F951B92B7DDC26006C8D2D /* VerticalStackView.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -31,6 +32,7 @@
 		D3AF3E722B74873D00344792 /* BaseTabBarController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BaseTabBarController.swift; sourceTree = "<group>"; };
 		D3AF3E742B74985800344792 /* AppSearchControllerViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppSearchControllerViewController.swift; sourceTree = "<group>"; };
 		D3AF3E772B749F4700344792 /* SearchResultCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchResultCell.swift; sourceTree = "<group>"; };
+		D3F951B92B7DDC26006C8D2D /* VerticalStackView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VerticalStackView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -64,6 +66,7 @@
 		D3AF3E5C2B747A9100344792 /* AppStoreClone */ = {
 			isa = PBXGroup;
 			children = (
+				D3F951B82B7DDC01006C8D2D /* Helpers */,
 				D3AF3E762B749F2900344792 /* Views */,
 				D3AF3E712B74872200344792 /* Controllers */,
 				D3AF3E5D2B747A9100344792 /* AppDelegate.swift */,
@@ -92,6 +95,14 @@
 				D3AF3E772B749F4700344792 /* SearchResultCell.swift */,
 			);
 			path = Views;
+			sourceTree = "<group>";
+		};
+		D3F951B82B7DDC01006C8D2D /* Helpers */ = {
+			isa = PBXGroup;
+			children = (
+				D3F951B92B7DDC26006C8D2D /* VerticalStackView.swift */,
+			);
+			path = Helpers;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -177,6 +188,7 @@
 				D3AF3E602B747A9100344792 /* SceneDelegate.swift in Sources */,
 				D3AF3E782B749F4700344792 /* SearchResultCell.swift in Sources */,
 				D3AF3E752B74985800344792 /* AppSearchControllerViewController.swift in Sources */,
+				D3F951BA2B7DDC26006C8D2D /* VerticalStackView.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
