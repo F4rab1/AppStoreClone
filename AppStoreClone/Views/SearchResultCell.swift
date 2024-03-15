@@ -74,12 +74,27 @@ class SearchResultCell: UICollectionViewCell {
         return imageView
     }
     
+    lazy var screenshotsStackView: UIStackView = {
+        let stackview = UIStackView()
+        stackview.spacing = 12
+        stackview.distribution = .fillEqually
+        [screenshot1ImageView, screenshot2ImageView, screenshot3ImageView].forEach { stackview.addArrangedSubview($0) }
+        
+        return stackview
+    }()
+    
     override init(frame: CGRect) {
         super.init(frame: frame)
         
-        backgroundColor = .black
-        
         addSubview(stackView)
+        
+        let overallStackView = VerticalStackView(arrangedSubviews: [stackView, screenshotsStackView], spacing: 16)
+        
+        addSubview(overallStackView)
+        overallStackView.snp.makeConstraints { make in
+            make.top.bottom.leading.trailing.equalToSuperview().inset(16)
+        }
+        
         setupConstraints()
     }
     
@@ -95,11 +110,6 @@ class SearchResultCell: UICollectionViewCell {
         getButton.snp.makeConstraints { make in
             make.width.equalTo(80)
             make.height.equalTo(32)
-        }
-        
-        stackView.snp.makeConstraints { make in
-            make.top.bottom.equalToSuperview()
-            make.leading.trailing.equalToSuperview().inset(16)
         }
     }
     
