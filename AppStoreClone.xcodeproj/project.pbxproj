@@ -17,6 +17,8 @@
 		D3AF3E752B74985800344792 /* AppSearchControllerViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D3AF3E742B74985800344792 /* AppSearchControllerViewController.swift */; };
 		D3AF3E782B749F4700344792 /* SearchResultCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = D3AF3E772B749F4700344792 /* SearchResultCell.swift */; };
 		D3AF3E7B2B74A07C00344792 /* SnapKit in Frameworks */ = {isa = PBXBuildFile; productRef = D3AF3E7A2B74A07C00344792 /* SnapKit */; };
+		D3E792232BC594A50099D3D7 /* SearchResult.swift in Sources */ = {isa = PBXBuildFile; fileRef = D3E792222BC594A50099D3D7 /* SearchResult.swift */; };
+		D3E792262BC599950099D3D7 /* Service.swift in Sources */ = {isa = PBXBuildFile; fileRef = D3E792252BC599950099D3D7 /* Service.swift */; };
 		D3F951BA2B7DDC26006C8D2D /* VerticalStackView.swift in Sources */ = {isa = PBXBuildFile; fileRef = D3F951B92B7DDC26006C8D2D /* VerticalStackView.swift */; };
 /* End PBXBuildFile section */
 
@@ -32,6 +34,8 @@
 		D3AF3E722B74873D00344792 /* BaseTabBarController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BaseTabBarController.swift; sourceTree = "<group>"; };
 		D3AF3E742B74985800344792 /* AppSearchControllerViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppSearchControllerViewController.swift; sourceTree = "<group>"; };
 		D3AF3E772B749F4700344792 /* SearchResultCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchResultCell.swift; sourceTree = "<group>"; };
+		D3E792222BC594A50099D3D7 /* SearchResult.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchResult.swift; sourceTree = "<group>"; };
+		D3E792252BC599950099D3D7 /* Service.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Service.swift; sourceTree = "<group>"; };
 		D3F951B92B7DDC26006C8D2D /* VerticalStackView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VerticalStackView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -66,6 +70,8 @@
 		D3AF3E5C2B747A9100344792 /* AppStoreClone */ = {
 			isa = PBXGroup;
 			children = (
+				D3E792242BC599820099D3D7 /* Service */,
+				D3E792212BC5948D0099D3D7 /* Models */,
 				D3F951B82B7DDC01006C8D2D /* Helpers */,
 				D3AF3E762B749F2900344792 /* Views */,
 				D3AF3E712B74872200344792 /* Controllers */,
@@ -95,6 +101,22 @@
 				D3AF3E772B749F4700344792 /* SearchResultCell.swift */,
 			);
 			path = Views;
+			sourceTree = "<group>";
+		};
+		D3E792212BC5948D0099D3D7 /* Models */ = {
+			isa = PBXGroup;
+			children = (
+				D3E792222BC594A50099D3D7 /* SearchResult.swift */,
+			);
+			path = Models;
+			sourceTree = "<group>";
+		};
+		D3E792242BC599820099D3D7 /* Service */ = {
+			isa = PBXGroup;
+			children = (
+				D3E792252BC599950099D3D7 /* Service.swift */,
+			);
+			path = Service;
 			sourceTree = "<group>";
 		};
 		D3F951B82B7DDC01006C8D2D /* Helpers */ = {
@@ -184,8 +206,10 @@
 			files = (
 				D3AF3E732B74873D00344792 /* BaseTabBarController.swift in Sources */,
 				D3AF3E622B747A9100344792 /* ViewController.swift in Sources */,
+				D3E792232BC594A50099D3D7 /* SearchResult.swift in Sources */,
 				D3AF3E5E2B747A9100344792 /* AppDelegate.swift in Sources */,
 				D3AF3E602B747A9100344792 /* SceneDelegate.swift in Sources */,
+				D3E792262BC599950099D3D7 /* Service.swift in Sources */,
 				D3AF3E782B749F4700344792 /* SearchResultCell.swift in Sources */,
 				D3AF3E752B74985800344792 /* AppSearchControllerViewController.swift in Sources */,
 				D3F951BA2B7DDC26006C8D2D /* VerticalStackView.swift in Sources */,
