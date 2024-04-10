@@ -17,6 +17,7 @@
 		D3AF3E752B74985800344792 /* AppSearchControllerViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D3AF3E742B74985800344792 /* AppSearchControllerViewController.swift */; };
 		D3AF3E782B749F4700344792 /* SearchResultCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = D3AF3E772B749F4700344792 /* SearchResultCell.swift */; };
 		D3AF3E7B2B74A07C00344792 /* SnapKit in Frameworks */ = {isa = PBXBuildFile; productRef = D3AF3E7A2B74A07C00344792 /* SnapKit */; };
+		D3B6D19C2BC6CBF800FFE51E /* SDWebImage in Frameworks */ = {isa = PBXBuildFile; productRef = D3B6D19B2BC6CBF800FFE51E /* SDWebImage */; };
 		D3E792232BC594A50099D3D7 /* SearchResult.swift in Sources */ = {isa = PBXBuildFile; fileRef = D3E792222BC594A50099D3D7 /* SearchResult.swift */; };
 		D3E792262BC599950099D3D7 /* Service.swift in Sources */ = {isa = PBXBuildFile; fileRef = D3E792252BC599950099D3D7 /* Service.swift */; };
 		D3F951BA2B7DDC26006C8D2D /* VerticalStackView.swift in Sources */ = {isa = PBXBuildFile; fileRef = D3F951B92B7DDC26006C8D2D /* VerticalStackView.swift */; };
@@ -44,6 +45,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				D3B6D19C2BC6CBF800FFE51E /* SDWebImage in Frameworks */,
 				D3AF3E7B2B74A07C00344792 /* SnapKit in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -145,6 +147,7 @@
 			name = AppStoreClone;
 			packageProductDependencies = (
 				D3AF3E7A2B74A07C00344792 /* SnapKit */,
+				D3B6D19B2BC6CBF800FFE51E /* SDWebImage */,
 			);
 			productName = AppStoreClone;
 			productReference = D3AF3E5A2B747A9100344792 /* AppStoreClone.app */;
@@ -176,6 +179,7 @@
 			mainGroup = D3AF3E512B747A9100344792;
 			packageReferences = (
 				D3AF3E792B74A07C00344792 /* XCRemoteSwiftPackageReference "SnapKit" */,
+				D3B6D19A2BC6CBF800FFE51E /* XCRemoteSwiftPackageReference "SDWebImage" */,
 			);
 			productRefGroup = D3AF3E5B2B747A9100344792 /* Products */;
 			projectDirPath = "";
@@ -436,6 +440,14 @@
 				minimumVersion = 5.0.0;
 			};
 		};
+		D3B6D19A2BC6CBF800FFE51E /* XCRemoteSwiftPackageReference "SDWebImage" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/SDWebImage/SDWebImage.git";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 5.0.0;
+			};
+		};
 /* End XCRemoteSwiftPackageReference section */
 
 /* Begin XCSwiftPackageProductDependency section */
@@ -443,6 +455,11 @@
 			isa = XCSwiftPackageProductDependency;
 			package = D3AF3E792B74A07C00344792 /* XCRemoteSwiftPackageReference "SnapKit" */;
 			productName = SnapKit;
+		};
+		D3B6D19B2BC6CBF800FFE51E /* SDWebImage */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = D3B6D19A2BC6CBF800FFE51E /* XCRemoteSwiftPackageReference "SDWebImage" */;
+			productName = SDWebImage;
 		};
 /* End XCSwiftPackageProductDependency section */
 	};
