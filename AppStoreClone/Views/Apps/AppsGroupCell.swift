@@ -27,7 +27,6 @@ class AppsGroupCell: UICollectionViewCell {
     }
     
     func setupUI() {
-        backgroundColor = .lightGray
         addSubview(titleLabel)
         addSubview(horizontalController.view)
         horizontalController.view.backgroundColor = .blue

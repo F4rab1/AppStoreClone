@@ -17,6 +17,7 @@
 		D3AF3E752B74985800344792 /* AppSearchControllerViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D3AF3E742B74985800344792 /* AppSearchControllerViewController.swift */; };
 		D3AF3E782B749F4700344792 /* SearchResultCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = D3AF3E772B749F4700344792 /* SearchResultCell.swift */; };
 		D3AF3E7B2B74A07C00344792 /* SnapKit in Frameworks */ = {isa = PBXBuildFile; productRef = D3AF3E7A2B74A07C00344792 /* SnapKit */; };
+		D3B3875A2BD248E500FB552D /* AppRowCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = D3B387592BD248E500FB552D /* AppRowCell.swift */; };
 		D3B586302BCC4AC700FFFA12 /* AppsController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D3B5862F2BCC4AC700FFFA12 /* AppsController.swift */; };
 		D3B586322BCC4AEA00FFFA12 /* BaseListController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D3B586312BCC4AEA00FFFA12 /* BaseListController.swift */; };
 		D3B586362BCC4C5700FFFA12 /* AppsGroupCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = D3B586352BCC4C5700FFFA12 /* AppsGroupCell.swift */; };
@@ -39,6 +40,7 @@
 		D3AF3E722B74873D00344792 /* BaseTabBarController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BaseTabBarController.swift; sourceTree = "<group>"; };
 		D3AF3E742B74985800344792 /* AppSearchControllerViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppSearchControllerViewController.swift; sourceTree = "<group>"; };
 		D3AF3E772B749F4700344792 /* SearchResultCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchResultCell.swift; sourceTree = "<group>"; };
+		D3B387592BD248E500FB552D /* AppRowCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppRowCell.swift; sourceTree = "<group>"; };
 		D3B5862F2BCC4AC700FFFA12 /* AppsController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppsController.swift; sourceTree = "<group>"; };
 		D3B586312BCC4AEA00FFFA12 /* BaseListController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BaseListController.swift; sourceTree = "<group>"; };
 		D3B586352BCC4C5700FFFA12 /* AppsGroupCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppsGroupCell.swift; sourceTree = "<group>"; };
@@ -145,6 +147,7 @@
 			isa = PBXGroup;
 			children = (
 				D3B586352BCC4C5700FFFA12 /* AppsGroupCell.swift */,
+				D3B387592BD248E500FB552D /* AppRowCell.swift */,
 			);
 			path = Apps;
 			sourceTree = "<group>";
@@ -258,6 +261,7 @@
 				D3B586302BCC4AC700FFFA12 /* AppsController.swift in Sources */,
 				D3AF3E5E2B747A9100344792 /* AppDelegate.swift in Sources */,
 				D3B586322BCC4AEA00FFFA12 /* BaseListController.swift in Sources */,
+				D3B3875A2BD248E500FB552D /* AppRowCell.swift in Sources */,
 				D3AF3E602B747A9100344792 /* SceneDelegate.swift in Sources */,
 				D3B586362BCC4C5700FFFA12 /* AppsGroupCell.swift in Sources */,
 				D3E792262BC599950099D3D7 /* Service.swift in Sources */,
