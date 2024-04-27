@@ -9,11 +9,9 @@ import Foundation
 
 class Service {
     
-    static let shared = Service() 
+    static let shared = Service()
     
     func fetchApps(searchTerm: String, completion: @escaping ([Result], Error?) -> ()) {
-        print("Fetching itunes apps from Service layer")
-        
         let urlString = "https://itunes.apple.com/search?term=\(searchTerm)&entity=software"
         guard let url = URL(string: urlString) else { return }
         
@@ -36,7 +34,27 @@ class Service {
                 completion([], jsonErr)
             }
             
-            }.resume()
+        }.resume()
+    }
+    
+    func fetchGames(completion: @escaping (AppGroup?, Error?) -> ()) {
+        guard let url = URL(string: "https://rss.applemarketingtools.com/api/v2/us/apps/top-free/50/apps.json") else { return }
+        
+        URLSession.shared.dataTask(with: url) { (data, resp, err) in
+            if let err = err {
+                completion(nil, err)
+                return
+            }
+            
+            do {
+                let appGroup = try JSONDecoder().decode(AppGroup.self, from: data!)
+                completion(appGroup, nil)
+            } catch {
+                completion(nil, error)
+            }
+            
+            
+        }.resume()
     }
     
 }

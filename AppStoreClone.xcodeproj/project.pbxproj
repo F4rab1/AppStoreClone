@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		D38614B52BDD7D61000E1701 /* AppGroup.swift in Sources */ = {isa = PBXBuildFile; fileRef = D38614B42BDD7D61000E1701 /* AppGroup.swift */; };
 		D3A382EC2BD57F7A00ABD53A /* AppsPageHeader.swift in Sources */ = {isa = PBXBuildFile; fileRef = D3A382EB2BD57F7A00ABD53A /* AppsPageHeader.swift */; };
 		D3A382EE2BD581A500ABD53A /* AppsHeaderHorizontalController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D3A382ED2BD581A500ABD53A /* AppsHeaderHorizontalController.swift */; };
 		D3A382F02BD58B8800ABD53A /* AppsHeaderCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = D3A382EF2BD58B8800ABD53A /* AppsHeaderCell.swift */; };
@@ -32,6 +33,7 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		D38614B42BDD7D61000E1701 /* AppGroup.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppGroup.swift; sourceTree = "<group>"; };
 		D3A382EB2BD57F7A00ABD53A /* AppsPageHeader.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppsPageHeader.swift; sourceTree = "<group>"; };
 		D3A382ED2BD581A500ABD53A /* AppsHeaderHorizontalController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppsHeaderHorizontalController.swift; sourceTree = "<group>"; };
 		D3A382EF2BD58B8800ABD53A /* AppsHeaderCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppsHeaderCell.swift; sourceTree = "<group>"; };
@@ -165,6 +167,7 @@
 			isa = PBXGroup;
 			children = (
 				D3E792222BC594A50099D3D7 /* SearchResult.swift */,
+				D38614B42BDD7D61000E1701 /* AppGroup.swift */,
 			);
 			path = Models;
 			sourceTree = "<group>";
@@ -277,6 +280,7 @@
 				D3B586362BCC4C5700FFFA12 /* AppsGroupCell.swift in Sources */,
 				D3A382EE2BD581A500ABD53A /* AppsHeaderHorizontalController.swift in Sources */,
 				D3E792262BC599950099D3D7 /* Service.swift in Sources */,
+				D38614B52BDD7D61000E1701 /* AppGroup.swift in Sources */,
 				D3AF3E782B749F4700344792 /* SearchResultCell.swift in Sources */,
 				D3AF3E752B74985800344792 /* AppSearchControllerViewController.swift in Sources */,
 				D3B586382BCC4E3900FFFA12 /* AppsHorizontalController.swift in Sources */,
