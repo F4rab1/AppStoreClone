@@ -11,7 +11,7 @@ class AppsController: BaseListController, UICollectionViewDelegateFlowLayout {
     
     let cellId = "AppsGroupCellid"
     let headerId = "headerId"
-    var editorsChoiceGames: AppGroup?
+    var groups = [AppGroup]()
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -23,16 +23,34 @@ class AppsController: BaseListController, UICollectionViewDelegateFlowLayout {
     }
     
     fileprivate func fetchData() {
-        Service.shared.fetchGames { (appGroup, err) in
-            if let err = err {
-                print("Failed to fetch apps:", err)
-                return
+        var group1: AppGroup?
+        var group2: AppGroup?
+        
+        let dispatchGroup = DispatchGroup()
+        
+        dispatchGroup.enter()
+        Service.shared.fetchAppGroup(urlString: "https://rss.applemarketingtools.com/api/v2/us/apps/top-free/25/apps.json") { (appGroup, err) in
+            dispatchGroup.leave()
+            group1 = appGroup
+        }
+        
+        dispatchGroup.enter()
+        Service.shared.fetchAppGroup(urlString: "https://rss.applemarketingtools.com/api/v2/us/apps/top-paid/25/apps.json") { (appGroup, err) in
+            dispatchGroup.leave()
+            group2 = appGroup
+        }
+        
+        dispatchGroup.notify(queue: .main) {
+            print("completed your dispatch group tasks...")
+            
+            if let group = group1 {
+                self.groups.append(group)
+            }
+            if let group = group2 {
+                self.groups.append(group)
             }
             
-            self.editorsChoiceGames = appGroup
-            DispatchQueue.main.async {
-                self.collectionView.reloadData()
-            }
+            self.collectionView.reloadData()
         }
     }
     
@@ -46,13 +64,14 @@ class AppsController: BaseListController, UICollectionViewDelegateFlowLayout {
     }
     
     override func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
-        return 1
+        return groups.count
     }
     
     override func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
         let cell = collectionView.dequeueReusableCell(withReuseIdentifier: cellId, for: indexPath) as! AppsGroupCell
-        cell.titleLabel.text = editorsChoiceGames?.feed.title
-        cell.horizontalController.appGroup = editorsChoiceGames
+        let appGroup = groups[indexPath.item]
+        cell.titleLabel.text = appGroup.feed.title
+        cell.horizontalController.appGroup = appGroup
         cell.horizontalController.collectionView.reloadData()
         
         return cell
