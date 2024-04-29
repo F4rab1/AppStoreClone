@@ -61,7 +61,7 @@ class AppSearchControllerViewController: UICollectionViewController, UICollectio
         
         timer = Timer.scheduledTimer(withTimeInterval: 0.5, repeats: false, block: { (_) in
             Service.shared.fetchApps(searchTerm: searchText) { (res, err) in
-                self.appResults = res
+                self.appResults = res?.results ?? []
                 DispatchQueue.main.async {
                     self.collectionView.reloadData()
                 }
@@ -72,14 +72,14 @@ class AppSearchControllerViewController: UICollectionViewController, UICollectio
     fileprivate var appResults = [Result]()
     
     fileprivate func fetchITunesApps() {
-        Service.shared.fetchApps(searchTerm: "instagram") { (results, err) in
+        Service.shared.fetchApps(searchTerm: "instagram") { (res, err) in
             
             if let err = err {
                 print("Failed to fetch apps:", err)
                 return
             }
             
-            self.appResults = results
+            self.appResults = res?.results ?? []
             DispatchQueue.main.async {
                 self.collectionView.reloadData()
             }
