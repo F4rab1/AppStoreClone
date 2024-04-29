@@ -14,7 +14,6 @@ class AppRowCell: UICollectionViewCell {
         let iv = UIImageView()
         iv.layer.cornerRadius = 12
         iv.clipsToBounds = true
-        iv.backgroundColor = .blue
         
         return iv
     }()

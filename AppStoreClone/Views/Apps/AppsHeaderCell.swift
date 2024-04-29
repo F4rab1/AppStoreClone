@@ -32,7 +32,6 @@ class AppsHeaderCell: UICollectionViewCell {
         iv.layer.cornerRadius = 8
         iv.clipsToBounds = true
         iv.contentMode = .scaleAspectFill
-        iv.backgroundColor = .red
         
         return iv
     }()
