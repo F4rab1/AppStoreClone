@@ -34,7 +34,6 @@ class Service {
             }
             do {
                 let objects = try JSONDecoder().decode(T.self, from: data!)
-                // success
                 completion(objects, nil)
             } catch {
                 completion(nil, error)
