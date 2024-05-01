@@ -10,6 +10,7 @@
 		D3470F782BE0DD98006B3A0B /* HorizontalSnappingController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D3470F772BE0DD98006B3A0B /* HorizontalSnappingController.swift */; };
 		D3470F7A2BE0DDB5006B3A0B /* BetterSnappingLayout.swift in Sources */ = {isa = PBXBuildFile; fileRef = D3470F792BE0DDB5006B3A0B /* BetterSnappingLayout.swift */; };
 		D3470F7F2BE0FA74006B3A0B /* AppDetailController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D3470F7E2BE0FA74006B3A0B /* AppDetailController.swift */; };
+		D3470F822BE2A765006B3A0B /* AppDetailCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = D3470F812BE2A765006B3A0B /* AppDetailCell.swift */; };
 		D38614B52BDD7D61000E1701 /* AppGroup.swift in Sources */ = {isa = PBXBuildFile; fileRef = D38614B42BDD7D61000E1701 /* AppGroup.swift */; };
 		D39C28B12BDFC1B300DA6D13 /* SocialApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = D39C28B02BDFC1B300DA6D13 /* SocialApp.swift */; };
 		D3A382EC2BD57F7A00ABD53A /* AppsPageHeader.swift in Sources */ = {isa = PBXBuildFile; fileRef = D3A382EB2BD57F7A00ABD53A /* AppsPageHeader.swift */; };
@@ -40,6 +41,7 @@
 		D3470F772BE0DD98006B3A0B /* HorizontalSnappingController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HorizontalSnappingController.swift; sourceTree = "<group>"; };
 		D3470F792BE0DDB5006B3A0B /* BetterSnappingLayout.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BetterSnappingLayout.swift; sourceTree = "<group>"; };
 		D3470F7E2BE0FA74006B3A0B /* AppDetailController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDetailController.swift; sourceTree = "<group>"; };
+		D3470F812BE2A765006B3A0B /* AppDetailCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDetailCell.swift; sourceTree = "<group>"; };
 		D38614B42BDD7D61000E1701 /* AppGroup.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppGroup.swift; sourceTree = "<group>"; };
 		D39C28B02BDFC1B300DA6D13 /* SocialApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SocialApp.swift; sourceTree = "<group>"; };
 		D3A382EB2BD57F7A00ABD53A /* AppsPageHeader.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppsPageHeader.swift; sourceTree = "<group>"; };
@@ -87,6 +89,14 @@
 			path = Details;
 			sourceTree = "<group>";
 		};
+		D3470F802BE2A74E006B3A0B /* Details */ = {
+			isa = PBXGroup;
+			children = (
+				D3470F812BE2A765006B3A0B /* AppDetailCell.swift */,
+			);
+			path = Details;
+			sourceTree = "<group>";
+		};
 		D3AF3E512B747A9100344792 = {
 			isa = PBXGroup;
 			children = (
@@ -125,7 +135,6 @@
 		D3AF3E712B74872200344792 /* Controllers */ = {
 			isa = PBXGroup;
 			children = (
-				D3470F7D2BE0FA38006B3A0B /* Details */,
 				D3B5862E2BCC4A8900FFFA12 /* Search */,
 				D3B5862D2BCC45E400FFFA12 /* Apps */,
 				D3AF3E722B74873D00344792 /* BaseTabBarController.swift */,
@@ -147,6 +156,7 @@
 		D3B5862D2BCC45E400FFFA12 /* Apps */ = {
 			isa = PBXGroup;
 			children = (
+				D3470F7D2BE0FA38006B3A0B /* Details */,
 				D3B5862F2BCC4AC700FFFA12 /* AppsController.swift */,
 				D3B586372BCC4E3900FFFA12 /* AppsHorizontalController.swift */,
 				D3A382ED2BD581A500ABD53A /* AppsHeaderHorizontalController.swift */,
@@ -173,6 +183,7 @@
 		D3B586342BCC4C4200FFFA12 /* Apps */ = {
 			isa = PBXGroup;
 			children = (
+				D3470F802BE2A74E006B3A0B /* Details */,
 				D3B586352BCC4C5700FFFA12 /* AppsGroupCell.swift */,
 				D3B387592BD248E500FB552D /* AppRowCell.swift */,
 				D3A382EB2BD57F7A00ABD53A /* AppsPageHeader.swift */,
@@ -307,6 +318,7 @@
 				D3AF3E782B749F4700344792 /* SearchResultCell.swift in Sources */,
 				D3AF3E752B74985800344792 /* AppSearchControllerViewController.swift in Sources */,
 				D3B586382BCC4E3900FFFA12 /* AppsHorizontalController.swift in Sources */,
+				D3470F822BE2A765006B3A0B /* AppDetailCell.swift in Sources */,
 				D3F951BA2B7DDC26006C8D2D /* VerticalStackView.swift in Sources */,
 				D3470F782BE0DD98006B3A0B /* HorizontalSnappingController.swift in Sources */,
 			);

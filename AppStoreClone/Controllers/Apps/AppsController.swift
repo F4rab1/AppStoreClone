@@ -98,6 +98,7 @@ class AppsController: BaseListController, UICollectionViewDelegateFlowLayout {
         cell.horizontalController.didSelectHandler = { [weak self] feedResult in
             let controller = AppDetailController()
             controller.navigationItem.title = feedResult.name
+            controller.appId = feedResult.id
             self?.navigationController?.pushViewController(controller, animated: true)
         }
         
