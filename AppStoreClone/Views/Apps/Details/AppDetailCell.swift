@@ -6,16 +6,100 @@
 //
 
 import UIKit
+import SnapKit
 
 class AppDetailCell: UICollectionViewCell {
+    
+    let appIconImageView: UIImageView = {
+        let iv = UIImageView()
+        iv.layer.cornerRadius = 16
+        iv.clipsToBounds = true
+        iv.backgroundColor = .red
+        
+        return iv
+    }()
+    
+    let nameLabel: UILabel = {
+        let label = UILabel()
+        label.text = "APP NAME"
+        label.font = .boldSystemFont(ofSize: 24)
+        label.numberOfLines = 2
+        
+        return label
+    }()
+    
+    let priceButton: UIButton = {
+        let button = UIButton(type: .system)
+        button.setTitle("2500 ₸", for: .normal)
+        button.setTitleColor(.white, for: .normal)
+        button.titleLabel?.font = .boldSystemFont(ofSize: 16)
+        button.backgroundColor = UIColor(white: 0.95, alpha: 1)
+        button.layer.cornerRadius = 16
+        button.backgroundColor = .blue
+        
+        return button
+    }()
+    
+    let whatsNewLabel: UILabel = {
+        let label = UILabel()
+        label.text = "What's New"
+        label.font = .boldSystemFont(ofSize: 20)
+        
+        return label
+    }()
+    
+    let releaseNotesLabel: UILabel = {
+        let label = UILabel()
+        label.text = "Release Notes"
+        label.font = .systemFont(ofSize: 16)
+        label.numberOfLines = 0
+        
+        return label
+    }()
     
     override init(frame: CGRect) {
         super.init(frame: frame)
         
-        backgroundColor = .blue
+        let stackView = VerticalStackView(arrangedSubviews: [
+            UIStackView(arrangedSubviews: [
+                appIconImageView,
+                VerticalStackView(arrangedSubviews: [
+                    nameLabel,
+                    UIStackView(arrangedSubviews: [priceButton, UIView()]),
+                    UIView()
+                    ], spacing: 12)
+                ], customSpacing: 20),
+            whatsNewLabel,
+            releaseNotesLabel
+            ], spacing: 16)
+        addSubview(stackView)
+        
+        setupConstraints()
+        stackView.snp.makeConstraints { make in
+            make.top.bottom.leading.trailing.equalToSuperview().inset(20)
+        }
     }
     
-    required init?(coder: NSCoder) {
-        fatalError("init(coder:) has not been implemented")
+    func setupConstraints() {
+        appIconImageView.snp.makeConstraints { make in
+            make.width.height.equalTo(140)
+        }
+        
+        priceButton.snp.makeConstraints { make in
+            make.height.equalTo(32)
+            make.width.equalTo(80)
+        }
+        
+    }
+    
+    required init?(coder aDecoder: NSCoder) {
+        fatalError()
+    }
+}
+
+extension UIStackView {
+    convenience init(arrangedSubviews: [UIView], customSpacing: CGFloat = 0) {
+        self.init(arrangedSubviews: arrangedSubviews)
+        self.spacing = customSpacing
     }
 }

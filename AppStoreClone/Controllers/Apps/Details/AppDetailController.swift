@@ -12,6 +12,10 @@ class AppDetailController: BaseListController, UICollectionViewDelegateFlowLayou
     var appId: String! {
         didSet {
             print("appId:", appId ?? "noneId")
+            let urlString = "https://itunes.apple.com/lookup?id=\(appId ?? "")"
+            Service.shared.fetchGenericJSONData(urlString: urlString) { (result: SearchResult?, err) in
+                print(result?.results.first?.releaseNotes)
+            }
         }
     }
     
@@ -22,6 +26,7 @@ class AppDetailController: BaseListController, UICollectionViewDelegateFlowLayou
         
         collectionView.backgroundColor = .yellow
         collectionView.register(AppDetailCell.self, forCellWithReuseIdentifier: detailCellId)
+        navigationItem.largeTitleDisplayMode = .never
     }
     
     override func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
