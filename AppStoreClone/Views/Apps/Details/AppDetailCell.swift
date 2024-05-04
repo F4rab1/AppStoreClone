@@ -23,7 +23,6 @@ class AppDetailCell: UICollectionViewCell {
         let iv = UIImageView()
         iv.layer.cornerRadius = 16
         iv.clipsToBounds = true
-        iv.backgroundColor = .red
         
         return iv
     }()

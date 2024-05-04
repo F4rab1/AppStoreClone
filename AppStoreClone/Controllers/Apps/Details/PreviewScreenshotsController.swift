@@ -24,8 +24,9 @@ class PreviewScreenshotsController: HorizontalSnappingController, UICollectionVi
         let imageView: UIImageView = {
             let iv = UIImageView()
             iv.layer.cornerRadius = 12
+            iv.layer.borderWidth = 0.5
+            iv.layer.borderColor = UIColor(white: 0.5, alpha: 0.5).cgColor
             iv.clipsToBounds = true
-            iv.backgroundColor = .red
             
             return iv
         }()
