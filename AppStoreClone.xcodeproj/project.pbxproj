@@ -18,6 +18,7 @@
 		D3A382F02BD58B8800ABD53A /* AppsHeaderCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = D3A382EF2BD58B8800ABD53A /* AppsHeaderCell.swift */; };
 		D3A46B252BE802880018092F /* UILabel+Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = D3A46B242BE802880018092F /* UILabel+Extensions.swift */; };
 		D3A46B272BE802BA0018092F /* UIButton+Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = D3A46B262BE802BA0018092F /* UIButton+Extensions.swift */; };
+		D3A46B292BE803030018092F /* UIImageView+Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = D3A46B282BE803030018092F /* UIImageView+Extensions.swift */; };
 		D3AB7C9F2BE6B505002B321F /* PreviewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = D3AB7C9E2BE6B505002B321F /* PreviewCell.swift */; };
 		D3AB7CA12BE6B77C002B321F /* PreviewScreenshotsController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D3AB7CA02BE6B77C002B321F /* PreviewScreenshotsController.swift */; };
 		D3AF3E5E2B747A9100344792 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = D3AF3E5D2B747A9100344792 /* AppDelegate.swift */; };
@@ -53,6 +54,7 @@
 		D3A382EF2BD58B8800ABD53A /* AppsHeaderCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppsHeaderCell.swift; sourceTree = "<group>"; };
 		D3A46B242BE802880018092F /* UILabel+Extensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UILabel+Extensions.swift"; sourceTree = "<group>"; };
 		D3A46B262BE802BA0018092F /* UIButton+Extensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIButton+Extensions.swift"; sourceTree = "<group>"; };
+		D3A46B282BE803030018092F /* UIImageView+Extensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIImageView+Extensions.swift"; sourceTree = "<group>"; };
 		D3AB7C9E2BE6B505002B321F /* PreviewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PreviewCell.swift; sourceTree = "<group>"; };
 		D3AB7CA02BE6B77C002B321F /* PreviewScreenshotsController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PreviewScreenshotsController.swift; sourceTree = "<group>"; };
 		D3AF3E5A2B747A9100344792 /* AppStoreClone.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = AppStoreClone.app; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -227,6 +229,7 @@
 				D3470F792BE0DDB5006B3A0B /* BetterSnappingLayout.swift */,
 				D3A46B242BE802880018092F /* UILabel+Extensions.swift */,
 				D3A46B262BE802BA0018092F /* UIButton+Extensions.swift */,
+				D3A46B282BE803030018092F /* UIImageView+Extensions.swift */,
 			);
 			path = Helpers;
 			sourceTree = "<group>";
@@ -332,6 +335,7 @@
 				D3E792262BC599950099D3D7 /* Service.swift in Sources */,
 				D38614B52BDD7D61000E1701 /* AppGroup.swift in Sources */,
 				D3AF3E782B749F4700344792 /* SearchResultCell.swift in Sources */,
+				D3A46B292BE803030018092F /* UIImageView+Extensions.swift in Sources */,
 				D3AF3E752B74985800344792 /* AppSearchControllerViewController.swift in Sources */,
 				D3B586382BCC4E3900FFFA12 /* AppsHorizontalController.swift in Sources */,
 				D3470F822BE2A765006B3A0B /* AppDetailCell.swift in Sources */,
