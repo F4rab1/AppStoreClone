@@ -10,38 +10,12 @@ import SnapKit
 
 class AppRowCell: UICollectionViewCell {
     
-    let appIconImageView: UIImageView = {
-        let iv = UIImageView()
-        iv.layer.cornerRadius = 12
-        iv.clipsToBounds = true
-        
-        return iv
-    }()
+    let appIconImageView = UIImageView(cornerRadius: 8)
     
-    let nameLabel: UILabel = {
-        let label = UILabel()
-        label.text = "APP NAME"
-        
-        return label
-    }()
+    let nameLabel = UILabel(text: "App Name", font: .systemFont(ofSize: 20))
+    let companyLabel = UILabel(text: "Company Name", font: .systemFont(ofSize: 13))
     
-    let companyLabel: UILabel = {
-        let label = UILabel()
-        label.text = "Company name"
-        
-        return label
-    }()
-    
-    let getButton: UIButton = {
-        let button = UIButton(type: .system)
-        button.setTitle("GET", for: .normal)
-        button.setTitleColor(.blue, for: .normal)
-        button.titleLabel?.font = .boldSystemFont(ofSize: 14)
-        button.backgroundColor = UIColor(white: 0.95, alpha: 1)
-        button.layer.cornerRadius = 16
-        
-        return button
-    }()
+    let getButton = UIButton(title: "GET")
     
     lazy var stackView: UIStackView = {
         let stackview = UIStackView()
