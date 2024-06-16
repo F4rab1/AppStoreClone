@@ -12,6 +12,9 @@
 		D3470F7F2BE0FA74006B3A0B /* AppDetailController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D3470F7E2BE0FA74006B3A0B /* AppDetailController.swift */; };
 		D3470F822BE2A765006B3A0B /* AppDetailCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = D3470F812BE2A765006B3A0B /* AppDetailCell.swift */; };
 		D38614B52BDD7D61000E1701 /* AppGroup.swift in Sources */ = {isa = PBXBuildFile; fileRef = D38614B42BDD7D61000E1701 /* AppGroup.swift */; };
+		D3877E6C2C1F40D20022D913 /* ReviewRowCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = D3877E6B2C1F40D20022D913 /* ReviewRowCell.swift */; };
+		D3877E6E2C1F41680022D913 /* ReviewsController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D3877E6D2C1F41680022D913 /* ReviewsController.swift */; };
+		D3877E702C1F41B60022D913 /* ReviewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = D3877E6F2C1F41B60022D913 /* ReviewCell.swift */; };
 		D39C28B12BDFC1B300DA6D13 /* SocialApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = D39C28B02BDFC1B300DA6D13 /* SocialApp.swift */; };
 		D3A382EC2BD57F7A00ABD53A /* AppsPageHeader.swift in Sources */ = {isa = PBXBuildFile; fileRef = D3A382EB2BD57F7A00ABD53A /* AppsPageHeader.swift */; };
 		D3A382EE2BD581A500ABD53A /* AppsHeaderHorizontalController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D3A382ED2BD581A500ABD53A /* AppsHeaderHorizontalController.swift */; };
@@ -48,6 +51,9 @@
 		D3470F7E2BE0FA74006B3A0B /* AppDetailController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDetailController.swift; sourceTree = "<group>"; };
 		D3470F812BE2A765006B3A0B /* AppDetailCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDetailCell.swift; sourceTree = "<group>"; };
 		D38614B42BDD7D61000E1701 /* AppGroup.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppGroup.swift; sourceTree = "<group>"; };
+		D3877E6B2C1F40D20022D913 /* ReviewRowCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ReviewRowCell.swift; sourceTree = "<group>"; };
+		D3877E6D2C1F41680022D913 /* ReviewsController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ReviewsController.swift; sourceTree = "<group>"; };
+		D3877E6F2C1F41B60022D913 /* ReviewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ReviewCell.swift; sourceTree = "<group>"; };
 		D39C28B02BDFC1B300DA6D13 /* SocialApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SocialApp.swift; sourceTree = "<group>"; };
 		D3A382EB2BD57F7A00ABD53A /* AppsPageHeader.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppsPageHeader.swift; sourceTree = "<group>"; };
 		D3A382ED2BD581A500ABD53A /* AppsHeaderHorizontalController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppsHeaderHorizontalController.swift; sourceTree = "<group>"; };
@@ -96,6 +102,7 @@
 			children = (
 				D3470F7E2BE0FA74006B3A0B /* AppDetailController.swift */,
 				D3AB7CA02BE6B77C002B321F /* PreviewScreenshotsController.swift */,
+				D3877E6D2C1F41680022D913 /* ReviewsController.swift */,
 			);
 			path = Details;
 			sourceTree = "<group>";
@@ -105,6 +112,8 @@
 			children = (
 				D3470F812BE2A765006B3A0B /* AppDetailCell.swift */,
 				D3AB7C9E2BE6B505002B321F /* PreviewCell.swift */,
+				D3877E6B2C1F40D20022D913 /* ReviewRowCell.swift */,
+				D3877E6F2C1F41B60022D913 /* ReviewCell.swift */,
 			);
 			path = Details;
 			sourceTree = "<group>";
@@ -318,9 +327,11 @@
 				D3E792232BC594A50099D3D7 /* SearchResult.swift in Sources */,
 				D3470F7A2BE0DDB5006B3A0B /* BetterSnappingLayout.swift in Sources */,
 				D3A382EC2BD57F7A00ABD53A /* AppsPageHeader.swift in Sources */,
+				D3877E6C2C1F40D20022D913 /* ReviewRowCell.swift in Sources */,
 				D3B586302BCC4AC700FFFA12 /* AppsController.swift in Sources */,
 				D3AB7C9F2BE6B505002B321F /* PreviewCell.swift in Sources */,
 				D39C28B12BDFC1B300DA6D13 /* SocialApp.swift in Sources */,
+				D3877E6E2C1F41680022D913 /* ReviewsController.swift in Sources */,
 				D3A382F02BD58B8800ABD53A /* AppsHeaderCell.swift in Sources */,
 				D3AF3E5E2B747A9100344792 /* AppDelegate.swift in Sources */,
 				D3B586322BCC4AEA00FFFA12 /* BaseListController.swift in Sources */,
@@ -333,6 +344,7 @@
 				D3A46B252BE802880018092F /* UILabel+Extensions.swift in Sources */,
 				D3470F7F2BE0FA74006B3A0B /* AppDetailController.swift in Sources */,
 				D3E792262BC599950099D3D7 /* Service.swift in Sources */,
+				D3877E702C1F41B60022D913 /* ReviewCell.swift in Sources */,
 				D38614B52BDD7D61000E1701 /* AppGroup.swift in Sources */,
 				D3AF3E782B749F4700344792 /* SearchResultCell.swift in Sources */,
 				D3A46B292BE803030018092F /* UIImageView+Extensions.swift in Sources */,
