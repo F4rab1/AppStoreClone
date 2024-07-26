@@ -20,11 +20,19 @@ class TodayController: BaseListController, UICollectionViewDelegateFlowLayout {
         collectionView.register(TodayCell.self, forCellWithReuseIdentifier: cellId)
     }
     
-    var appFullscreenController: UIViewController!
+    var appFullscreenController: AppFullscreenController!
+    
+    var topConstraint: NSLayoutConstraint?
+    var leadingConstraint: NSLayoutConstraint?
+    var widthConstraint: NSLayoutConstraint?
+    var heightConstraint: NSLayoutConstraint?
     
     override func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
         
         let appFullscreenController = AppFullscreenController()
+        appFullscreenController.dismissHandler = {
+            self.handleRemoveRedView()
+        }
         let redView = appFullscreenController.view!
         redView.addGestureRecognizer(UITapGestureRecognizer(target: self, action: #selector(handleRemoveRedView)))
         view.addSubview(redView)
@@ -38,22 +46,43 @@ class TodayController: BaseListController, UICollectionViewDelegateFlowLayout {
         guard let startingFrame = cell.superview?.convert(cell.frame, to: nil) else { return }
         
         self.startingFrame = startingFrame
-        redView.frame = startingFrame
+        
+        redView.translatesAutoresizingMaskIntoConstraints = false
+        topConstraint = redView.topAnchor.constraint(equalTo: view.topAnchor, constant: startingFrame.origin.y)
+        leadingConstraint = redView.leadingAnchor.constraint(equalTo: view.leadingAnchor, constant: startingFrame.origin.x)
+        widthConstraint = redView.widthAnchor.constraint(equalToConstant: startingFrame.width)
+        heightConstraint = redView.heightAnchor.constraint(equalToConstant: startingFrame.height)
+        
+        NSLayoutConstraint.activate([topConstraint, leadingConstraint, widthConstraint, heightConstraint].compactMap { $0 })
+        self.view.layoutIfNeeded()
+        
         redView.layer.cornerRadius = 16
         
         UIView.animate(withDuration: 0.7, delay: 0, usingSpringWithDamping: 0.7, initialSpringVelocity: 0.7, options: .curveEaseOut, animations: {
-            redView.frame = self.view.frame
-            self.tabBarController?.tabBar.transform = CGAffineTransform(translationX: 0, y: 100)
+            self.topConstraint?.constant = 0
+            self.leadingConstraint?.constant = 0
+            self.widthConstraint?.constant = self.view.frame.width
+            self.heightConstraint?.constant = self.view.frame.height
+            
+            self.view.layoutIfNeeded()
         }, completion: nil)
     }
     
     var startingFrame: CGRect?
     
-    @objc func handleRemoveRedView(gesture: UITapGestureRecognizer) {
+    @objc func handleRemoveRedView() {
         UIView.animate(withDuration: 0.7, delay: 0, usingSpringWithDamping: 0.7, initialSpringVelocity: 0.7, options: .curveEaseOut, animations: {
-            gesture.view?.frame = self.startingFrame ?? .zero
+            
+            guard let startingFrame = self.startingFrame else { return }
+            self.topConstraint?.constant = startingFrame.origin.y
+            self.leadingConstraint?.constant = startingFrame.origin.x
+            self.widthConstraint?.constant = startingFrame.width
+            self.heightConstraint?.constant = startingFrame.height
+            
+            self.view.layoutIfNeeded()
+            self.appFullscreenController.tableView.scrollToRow(at: [0,0], at: .top, animated: true)
         }, completion: { _ in
-            gesture.view?.removeFromSuperview()
+            self.appFullscreenController.view.removeFromSuperview()
             self.appFullscreenController.removeFromParent()
         })
     }

@@ -23,8 +23,8 @@ class TodayCell: UICollectionViewCell {
         
         backgroundColor = .white
         layer.cornerRadius = 16
+        contentView.addSubview(todayImageView)
         
-        addSubview(todayImageView)
         todayImageView.snp.makeConstraints { make in
             make.centerX.centerY.equalToSuperview()
             make.width.height.equalTo(250)

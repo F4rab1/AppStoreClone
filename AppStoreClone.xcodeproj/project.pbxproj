@@ -8,8 +8,8 @@
 
 /* Begin PBXBuildFile section */
 		D3008D132C53A1FE004C65C6 /* AppFullscreenController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D3008D122C53A1FE004C65C6 /* AppFullscreenController.swift */; };
-		D3008D152C53A231004C65C6 /* TodayTableCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = D3008D142C53A231004C65C6 /* TodayTableCell.swift */; };
 		D3008D172C53A527004C65C6 /* AppFullscreenDescriptionCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = D3008D162C53A527004C65C6 /* AppFullscreenDescriptionCell.swift */; };
+		D3008D192C53AD1A004C65C6 /* AppFullscreenHeaderCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = D3008D182C53AD1A004C65C6 /* AppFullscreenHeaderCell.swift */; };
 		D336C5152C31D4E60003FCF4 /* TodayController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D336C5142C31D4E60003FCF4 /* TodayController.swift */; };
 		D336C5182C31D5F90003FCF4 /* TodayCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = D336C5172C31D5F90003FCF4 /* TodayCell.swift */; };
 		D3470F782BE0DD98006B3A0B /* HorizontalSnappingController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D3470F772BE0DD98006B3A0B /* HorizontalSnappingController.swift */; };
@@ -53,8 +53,8 @@
 
 /* Begin PBXFileReference section */
 		D3008D122C53A1FE004C65C6 /* AppFullscreenController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppFullscreenController.swift; sourceTree = "<group>"; };
-		D3008D142C53A231004C65C6 /* TodayTableCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TodayTableCell.swift; sourceTree = "<group>"; };
 		D3008D162C53A527004C65C6 /* AppFullscreenDescriptionCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppFullscreenDescriptionCell.swift; sourceTree = "<group>"; };
+		D3008D182C53AD1A004C65C6 /* AppFullscreenHeaderCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppFullscreenHeaderCell.swift; sourceTree = "<group>"; };
 		D336C5142C31D4E60003FCF4 /* TodayController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TodayController.swift; sourceTree = "<group>"; };
 		D336C5172C31D5F90003FCF4 /* TodayCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TodayCell.swift; sourceTree = "<group>"; };
 		D3470F772BE0DD98006B3A0B /* HorizontalSnappingController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HorizontalSnappingController.swift; sourceTree = "<group>"; };
@@ -122,8 +122,8 @@
 			isa = PBXGroup;
 			children = (
 				D336C5172C31D5F90003FCF4 /* TodayCell.swift */,
-				D3008D142C53A231004C65C6 /* TodayTableCell.swift */,
 				D3008D162C53A527004C65C6 /* AppFullscreenDescriptionCell.swift */,
+				D3008D182C53AD1A004C65C6 /* AppFullscreenHeaderCell.swift */,
 			);
 			path = Today;
 			sourceTree = "<group>";
@@ -382,11 +382,11 @@
 				D3A46B252BE802880018092F /* UILabel+Extensions.swift in Sources */,
 				D3470F7F2BE0FA74006B3A0B /* AppDetailController.swift in Sources */,
 				D3E792262BC599950099D3D7 /* Service.swift in Sources */,
-				D3008D152C53A231004C65C6 /* TodayTableCell.swift in Sources */,
 				D3877E702C1F41B60022D913 /* ReviewCell.swift in Sources */,
 				D38614B52BDD7D61000E1701 /* AppGroup.swift in Sources */,
 				D3AF3E782B749F4700344792 /* SearchResultCell.swift in Sources */,
 				D336C5182C31D5F90003FCF4 /* TodayCell.swift in Sources */,
+				D3008D192C53AD1A004C65C6 /* AppFullscreenHeaderCell.swift in Sources */,
 				D3A46B292BE803030018092F /* UIImageView+Extensions.swift in Sources */,
 				D3AF3E752B74985800344792 /* AppSearchControllerViewController.swift in Sources */,
 				D3B586382BCC4E3900FFFA12 /* AppsHorizontalController.swift in Sources */,
